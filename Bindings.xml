@@ -1,0 +1,9 @@
+
+<Bindings>
+	<Binding name="DB_VOLUME_UP" header="DB_VOLUME_UP" default="CTRL-+">
+		LibStub("AceAddon-3.0"):GetAddon("VolumeControls"):IncreaseMasterVolume();
+	</Binding>
+	<Binding name="DB_VOLUME_DN" header="DB_VOLUME_DN" default="CTRL--">
+		LibStub("AceAddon-3.0"):GetAddon("VolumeControls"):DecreaseMasterVolume();
+	</Binding>
+</Bindings>

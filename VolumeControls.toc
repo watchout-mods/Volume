@@ -1,0 +1,11 @@
+## Interface: 70000
+## Title: Volume Controls
+## Version: @project-version@
+## Notes: Enables you to set game volume levels according to the decibel scale
+## Author: watchout @ Curseforge
+## SavedVariables: 
+## Dependencies: 
+## OptionalDeps: Ace3
+## X-Keywords: GUI
+
+VolumeControls.lua
