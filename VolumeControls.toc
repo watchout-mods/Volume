@@ -1,4 +1,4 @@
-## Interface: 70000
+## Interface: 90105
 ## Title: Volume Controls
 ## Version: @project-version@
 ## Notes: Enables you to set game volume levels according to the decibel scale
