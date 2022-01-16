@@ -10,7 +10,7 @@ local dataobj, frame;
 -- @param category string
 -- @param level range 0..1
 local function Set_Volume(category, level)
-	return SetCVar(category, (1/9)*(10^level - 1));
+	return SetCVar(category, (1 / 9) * (10 ^ level - 1));
 end
 
 ---
@@ -42,6 +42,18 @@ local function Change_Volume(category, direction)
 		Set_Volume(category, max(0, Get_Volume(category) - inc));
 	end
 	return Get_Volume(category);
+end
+
+-- https://github.com/tekkub/wow-globalstrings/blob/master/GlobalStrings/enUS.lua
+local labels = {
+	["Sound_MasterVolume"] = MASTER_VOLUME,
+	["Sound_AmbienceVolume"] = AMBIENCE_VOLUME,
+	["Sound_SFXVolume"] = SOUND_VOLUME,
+	["Sound_MusicVolume"] = MUSIC_VOLUME,
+	["Sound_DialogVolume"] = DIALOG_VOLUME,
+}
+local function Get_Label_Text(category)
+	return labels[category];
 end
 
 ---
@@ -78,8 +90,6 @@ end
 function Addon:UpdateLdb()
 	dataobj.text = GetFormattedValue(self:GetMasterVolume());
 end
-
-
 
 function Addon:OnEnable()
 	dataobj.text = GetFormattedValue(self:GetMasterVolume());
@@ -131,7 +141,7 @@ function Addon:CreateSliderWidget(frame, name, category, offset)
 	-- Slider Label Text
 	local sliderText = frame:CreateFontString();
 	sliderText:SetFontObject(GameFontHighlightSmallLeft);
-	sliderText:SetText(category);
+	sliderText:SetText(Get_Label_Text(category));
 	sliderText:SetPoint("TOPLEFT", frame, 10, offset);
 
 	-- Slider Text Value
@@ -147,7 +157,6 @@ function Addon:CreateSliderWidget(frame, name, category, offset)
 	sliderFrame:SetMinMaxValues(0, 1);
 	sliderFrame.tooltipText = ("|cffffffff%s|r\nUse mouse wheel to change value."):format(category);
 	sliderFrame:SetValue(-1);
-	--sliderFrame:SetValue(Get_Volume(category));
 	sliderFrame:SetValueStep(inc);
 	sliderFrame:SetPoint("TOPLEFT", frame, 10, offset - 10);
 	sliderFrame:EnableMouseWheel(1);
@@ -183,7 +192,7 @@ end
 function Addon:CreateSliderFrame()
 	local frame = CreateFrame("Frame", "VolumeControlsFrame", UIParent, "BackdropTemplate");
 	frame:SetFrameStrata("DIALOG");
-	frame:SetSize(200, 250);
+	frame:SetSize(200, 230);
 	frame:SetClampedToScreen(true);
 	frame:SetBackdrop({ bgFile = "Interface\\Tooltips\\UI-Tooltip-Background",
 		edgeFile = "Interface\\Tooltips\\UI-Tooltip-Border",
@@ -213,7 +222,7 @@ function Addon:CreateSliderFrame()
 		end
 	end);
 
-	local o, i = -10, -50;
+	local o, i = -10, -45;
 	frame.SliderMaster = self:CreateSliderWidget(frame, "Master", "Sound_MasterVolume", o + 0 * i);
 	frame.SliderSound = self:CreateSliderWidget(frame, "Sound", "Sound_SFXVolume", o + 1 * i);
 	frame.SliderMusic = self:CreateSliderWidget(frame, "Music", "Sound_MusicVolume", o + 2 * i);
