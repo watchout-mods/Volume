@@ -5,7 +5,12 @@
 ## Author: watchout @ Curseforge
 ## SavedVariables: 
 ## Dependencies: 
-## OptionalDeps: Ace3
+## OptionalDeps: Ace3, ChocolateBar
 ## X-Keywords: GUI
+
+lib\LibStub\LibStub.lua
+lib\CallbackHandler-1.0\CallbackHandler-1.0.lua
+lib\AceAddon-3.0\AceAddon-3.0.xml
+lib\LibDataBroker-1.1\LibDataBroker-1.1.lua
 
 VolumeControls.lua
