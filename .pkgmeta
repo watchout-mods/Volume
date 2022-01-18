@@ -12,13 +12,6 @@ externals:
         url: https://github.com/tekkub/libdatabroker-1-1.git
         tag: v1.1.4
 
-    lib/AceLocale-3.0:
-        url: https://repos.curseforge.com/wow/ace3/trunk/AceLocale-3.0
-        tag: latest
-    lib/AceEvent-3.0:
-        url: https://repos.curseforge.com/wow/ace3/trunk/AceEvent-3.0
-        tag: latest
-
 ignore:
     - media-original
     - reference
