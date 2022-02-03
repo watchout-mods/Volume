@@ -6,7 +6,11 @@ Currently tested with
 
 * ChocolateBar
 
-In most games, volume sliders have a linear output power scale, and WoW is among those. But our ears are not linear, which makes finding the right volume level harder than it has to be.
+In most games, volume sliders have a linear output power scale, and WoW is among those. But human hearing is not linear, which makes finding the right volume level harder than it has to be. This addon is meant to help.
 
-## Example
+## Usage
+
+Use the mouse-wheel on the broker display to change the master volume directly. Click to open the popup controls.
+
+## Screenshot
 ![Screen-shot](media-original/Screenshot.png)
