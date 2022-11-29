@@ -44,11 +44,12 @@ local function Change_Volume(category, direction)
 	return Get_Volume(category);
 end
 
+-- https://github.com/Gethe/wow-ui-source/blob/532edb9c5c2930dcc60a2f59c48f8fb414652be1/Interface/SharedXML/SettingDefinitions/Audio.lua#L434
 -- https://github.com/tekkub/wow-globalstrings/blob/master/GlobalStrings/enUS.lua
 local labels = {
 	["Sound_MasterVolume"] = MASTER_VOLUME,
 	["Sound_AmbienceVolume"] = AMBIENCE_VOLUME,
-	["Sound_SFXVolume"] = SOUND_VOLUME,
+	["Sound_SFXVolume"] = FX_VOLUME,
 	["Sound_MusicVolume"] = MUSIC_VOLUME,
 	["Sound_DialogVolume"] = DIALOG_VOLUME,
 }

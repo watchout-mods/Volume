@@ -1,5 +1,5 @@
-## Interface: 90105
-## Title: Volume Controls
+## Interface: 100002
+## Title: dB Volume Controls
 ## Version: @project-version@
 ## Notes: Enables you to set game volume levels according to the decibel scale
 ## Author: watchout @ Curseforge
