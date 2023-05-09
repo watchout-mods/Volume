@@ -1,8 +1,9 @@
-## Interface: 100005
+## Interface: 100100
 ## Title: dB Volume Controls
 ## Version: @project-version@
 ## Notes: Enables you to set game volume levels according to the decibel scale
 ## Author: watchout @ Curseforge
+## IconTexture: Interface\AddOns\VolumeControls\media\Speaker
 ## SavedVariables: 
 ## Dependencies: 
 ## OptionalDeps: Ace3, ChocolateBar
